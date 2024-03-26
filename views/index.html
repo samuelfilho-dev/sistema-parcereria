@@ -1,11 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sistema ParecererIA</title>
-  </head>
-  <body>
-    <h1>Sistema ParecererIA</h1>
-  </body>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/root.css">
+    <link rel="stylesheet" href="styles/cabecalho.css">
+    <title>Sistema Parecer Juridico</title>
+</head>
+<body>
+<header id="cabecalho">
+    <section id="cabecalho-container">
+        <div id="cabecalho-form-pesquisa">
+            <form>
+                <label for="procurar-parecer">
+                    <input id="procurar-parecer" name="tema_parecer"
+                           placeholder="Procurar por um parecer, Ranque, Recentes"
+                    />
+                </label>
+                <button id="buscar-btn">
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_25_1295)">
+                            <path d="M12.396 11.774L9.15603 8.53396C9.68403 7.84596 10.004 7.08596 10.116 6.25396C10.228 5.42196 10.132 4.61396 9.82803 3.82996C9.52403 3.04596 9.03603 2.38996 8.36403 1.86196C7.93203 1.52596 7.46403 1.26996 6.96003 1.09396C6.45603 0.917956 5.94003 0.829956 5.41203 0.829956C4.54803 0.829956 3.75203 1.04196 3.02403 1.46596C2.29603 1.88996 1.72003 2.46596 1.29603 3.19396C0.872034 3.92196 0.660034 4.72196 0.660034 5.59396C0.660034 6.46596 0.884034 7.27796 1.33203 8.02996C1.78003 8.78196 2.39203 9.36196 3.16803 9.76996C3.94403 10.178 4.76803 10.362 5.64003 10.322C6.51203 10.282 7.31603 10.022 8.05203 9.54196L11.316 12.83L12.396 11.774ZM2.17203 5.58196C2.17203 4.98996 2.31603 4.44596 2.60403 3.94996C2.89203 3.45396 3.28403 3.05796 3.78003 2.76196C4.27603 2.46596 4.82003 2.31796 5.41203 2.31796C6.00403 2.31796 6.54803 2.46596 7.04403 2.76196C7.54003 3.05796 7.93603 3.45396 8.23203 3.94996C8.52803 4.44596 8.67603 4.98996 8.67603 5.58196C8.67603 6.17396 8.52803 6.71796 8.23203 7.21396C7.93603 7.70996 7.54003 8.10596 7.04403 8.40196C6.54803 8.69796 6.00403 8.84596 5.41203 8.84596C4.82003 8.84596 4.27603 8.69796 3.78003 8.40196C3.28403 8.10596 2.89203 7.70996 2.60403 7.21396C2.31603 6.71796 2.17203 6.17396 2.17203 5.58196Z"
+                                  fill="black"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_25_1295">
+                                <rect width="12" height="12" fill="white"
+                                      transform="matrix(1 0 0 -1 0.660034 12.83)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            </form>
+            <p id="paragrafo-form">
+                Ex.: Tema ou assunto relacionado
+            </p>
+        </div>
+        <nav id="cabecalho-navbar">
+
+            <div class="anchor-nav">
+                <a href="#minha_conta" class="nav">
+                    Referências
+                </a>
+            </div>
+            <div class="anchor-nav" id="nav-criar">
+                <a href="#minha_conta" class="nav">
+                    Criar Parecer
+                </a>
+            </div>
+            <div class="anchor-nav" id="nav-items">
+                <a href="#minha_conta" class="nav">
+                    Meus Items
+                </a>
+            </div>
+            <div class="anchor-nav">
+                <a href="#minha_conta" class="nav">
+                    Quem Somos
+                </a>
+            </div>
+            <div class="anchor-nav">
+                <a href="#minha_conta" class="nav">
+                    Minha Conta
+                </a>
+            </div>
+        </nav>
+    </section>
+    <button id="publicar-btn">
+        Publicar
+    </button>
+</header>
+<main>
+
+</main>
+
+<footer id="rodape">
+
+</footer>
+</body>
 </html>
