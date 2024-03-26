@@ -1,0 +1,93 @@
+#rodape {
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid red;
+    height: 240px;
+    background-color: var(--footer-background-color);
+    align-items: center;
+}
+
+#rodape-logos-container {
+    width: 980px;
+    height: 158px;
+    display: flex;
+    justify-content: space-evenly;
+    border-left: 1px solid #3B3B3B;
+}
+
+#logos-redes {
+    width: 326px;
+    height: 158px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#titulo-logos-redes {
+    width: 68px;
+    height: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: var(--footer-text-color);
+}
+
+#logos {
+    display: flex;
+    gap: 20px;
+}
+
+#equipe {
+    width: 327px;
+    height: 158px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid #3B3B3B;
+    border-right: 1px solid #3B3B3B;
+}
+
+#title-equipe {
+    width: 208px;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--footer-text-color);
+}
+
+#rodape-sobre {
+    width: 1480px;
+    height: 82px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid var(--footer-boder-color);
+}
+
+.membro {
+    width: 219px;
+    height: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    color: var(--footer-text-color);
+}
+
+.sobre {
+    width: 140px;
+    height: 15px;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--footer-text-color);
+}
+
+.sobre:hover {
+    cursor: pointer;
+}
