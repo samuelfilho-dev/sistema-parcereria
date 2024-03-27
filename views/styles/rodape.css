@@ -1,7 +1,6 @@
 #rodape {
     display: flex;
     flex-direction: column;
-    outline: 1px solid red;
     height: 240px;
     background-color: var(--footer-background-color);
     align-items: center;
