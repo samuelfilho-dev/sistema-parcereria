@@ -31,6 +31,10 @@
     padding-left: 15px;
 }
 
+#procurar-parecer-form {
+    display: flex;
+}
+
 #procurar-parecer {
     width: 362px;
     height: 34px;
