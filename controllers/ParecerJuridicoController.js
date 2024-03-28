@@ -1,51 +1,60 @@
-import { Autor, ParecerJuridico } from "../models/models.js";
+import fs from "fs";
 
-const autor = new Autor(
-  "Enrico",
-  "Santos",
-  "enrico_henrique_santos@suzano.com.br",
-  "nYUmeUY3iD"
-);
+import {ParecerJuridico} from "../models/models.js";
+
+let pareceresJuricios = [];
+let autores = [];
 
 function criarParcerJuridico(assunto, ementa, justificacao, conclusao) {
-  const novoParecerJuridico = new ParecerJuridico(
-    assunto,
-    ementa,
-    justificacao,
-    conclusao,
-    0,
-    autor
-  );
-
-  return novoParecerJuridico;
+    return new ParecerJuridico(
+        assunto,
+        ementa,
+        justificacao,
+        conclusao,
+        0,
+        autor
+    );
 }
 
-function buscarParecerJuridico() {
-  // TODO: fetch a API do Thiago e Matheus
+function lerDados() {
+    const data = fs.readFileSync('../mock.json', {encoding: "utf-8", flag: "r"});
+    const jsonData = JSON.parse(data);
+
+    jsonData['pareceres'].forEach((parecer) => {
+        pareceresJuricios.push(parecer);
+    });
+
+    jsonData['autores'].forEach((autor) => {
+        autores.push(autor);
+    });
 }
 
 function atualizarParecerJuridico(id) {
-  // TODO: Buscar Parecer Juridico Pelo Id
-  // TODO: Atualizar Parecer encontrado pelo Id
+    // TODO: Buscar Parecer Juridico Pelo Id
+    // TODO: Atualizar Parecer encontrado pelo Id
 }
 
 function deletarParecerJuridico(id) {
-  // TODO: Buscar Parecer Juridico Pelo Id
-  // TODO: Deletar Parecer encontrado pelo Id
+    // TODO: Buscar Parecer Juridico Pelo Id
+    // TODO: Deletar Parecer encontrado pelo Id
 }
 
 function encontrarParecerJuridicoPeloId(id) {
-  // TODO: Buscar Parecer Juridico Pelo Id
-  // TODO: Entregar Parecer encontrado pelo Id
+    // TODO: Buscar Parecer Juridico Pelo Id
+    // TODO: Entregar Parecer encontrado pelo Id
 }
 
 function encontrarParecerJuridicoPeloNome(nome) {
-  // TODO: Buscar Parecer Juridico Pelo Nome
-  // TODO: Entregar Parecer encontrado pelo Nome
+    // TODO: Buscar Parecer Juridico Pelo Nome
+    // TODO: Entregar Parecer encontrado pelo Nome
 }
 
 function encontrarParecerJuridicos() {
-  // TODO: Entregar Todos Parecer Juridicos
+    return pareceresJuricios;
 }
 
-function avaliarParecerJuridico(nota) {}
+function avaliarParecerJuridico(nota) {
+}
+
+lerDados();
+
