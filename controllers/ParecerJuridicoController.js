@@ -5,17 +5,6 @@ import {ParecerJuridico} from "../models/models.js";
 let pareceresJuricios = [];
 let autores = [];
 
-function criarParcerJuridico(assunto, ementa, justificacao, conclusao, autor) {
-    return new ParecerJuridico(
-        assunto,
-        ementa,
-        justificacao,
-        conclusao,
-        0,
-        autor
-    );
-}
-
 function lerDados() {
     const data = fs.readFileSync('../mock.json', {encoding: "utf-8", flag: "r"});
     const jsonData = JSON.parse(data);
@@ -29,6 +18,17 @@ function lerDados() {
         pareceresJuricios.push(dbParecer);
     });
 
+}
+
+function criarParcerJuridico(assunto, ementa, justificacao, conclusao, autor) {
+    return new ParecerJuridico(
+        assunto,
+        ementa,
+        justificacao,
+        conclusao,
+        0,
+        autor
+    );
 }
 
 function atualizarParecerJuridico(id, assunto, ementa, justifacao, conclusao) {
@@ -63,5 +63,3 @@ function avaliarParecerJuridico(id, nota) {
     const parecerJuridico = encontrarParecerJuridicoPeloId(id);
     parecerJuridico.notaDeClassificacao.push(nota);
 }
-
-lerDados();
