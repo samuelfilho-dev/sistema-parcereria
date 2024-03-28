@@ -205,8 +205,9 @@
     width: 411px;
     height: 50px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
 
 #paragrafo-avaliar {
@@ -214,8 +215,8 @@
     height: 15px;
     font-weight: 800;
     font-size: 11px;
-    align-items: center;
     text-transform: uppercase;
+    margin-top: 5px;
 }
 
 #btn-salvar-container {
@@ -300,4 +301,38 @@
     font-size: 22px;
     font-weight: 800;
     color: var(--main-title-color);
+}
+
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+    position: relative;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    display: inline-block;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.rating label:before {
+    content: '\2605';
+    font-size: 24px;
+}
+
+.rating input:checked ~ label,
+.rating label:hover ~ label {
+    color: #ffcc00;
+}
+
+.rating input:checked ~ label:before,
+.rating label:hover ~ label:before,
+.rating label:hover:before {
+    content: '\2605';
+    color: #ffcc00;
 }
