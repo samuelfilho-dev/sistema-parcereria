@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="styles/root.css">
     <link rel="stylesheet" href="styles/cabecalho.css">
     <link rel="stylesheet" href="styles/rodape.css">
+    <link rel="stylesheet" href="styles/parecer-ranking.css">
     <title>Sistema Parecer Juridico</title>
 </head>
 <body>
 <header id="cabecalho">
     <section id="cabecalho-container">
         <div id="cabecalho-form-pesquisa">
-            <form>
+            <form id="procurar-parecer-form">
                 <label for="procurar-parecer">
                     <input id="procurar-parecer" name="tema_parecer"
                            placeholder="Procurar por um parecer, Ranque, Recentes"
@@ -71,8 +72,114 @@
         Publicar
     </button>
 </header>
-<main>
+<main id="parecer-ranking">
+    <section id="parecer-ranking-container">
+        <div id="main-info-container">
+            <h1 id="titulo-main">Ranque de pareceres</h1>
+            <p id="titulo-ph">Tópicos separados para você!</p>
+        </div>
+        <nav id="ranking-navbar">
+            <button id="btn-avalicacao-nav">
+                Melhores avaliações
+            </button>
+            <button id="btn-recentes-nav">
+                Recentes
+            </button>
+            <button id="btn-antigo-nav">
+                Mais antigos
+            </button>
+            <button id="btn-atualizacoes-nav">
+                Atualizações
+            </button>
+            <button id="button-add-filtro">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_25_250)">
+                        <path d="M4.152 11.544V0.456006H7.248V11.544H4.152ZM0 7.46401V4.53601H11.424V7.46401H0Z"
+                              fill="black"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_25_250">
+                            <rect width="12" height="12" fill="white" transform="matrix(1 0 0 -1 0 12)"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </button>
+        </nav>
 
+        <div id="parecer-ranking-filtro">
+            <p id="ph-ranking-filtro">Organizar por</p>
+            <label>
+                <select id="select-ranking-filtro">
+                    <option selected class="opcao-filtro">
+                        Mais Populares
+                    </option>
+                    <option class="opcao-filtro">Melhores Avalidados</option>
+                </select>
+            </label>
+        </div>
+
+        <section id="parecer-container">
+
+            <section id="parecer-info">
+                <h2 id="titulo-parecer">XXXXXXX. XXXXXX. XXXXXXXX</h2>
+                <div class="info-container">
+                    <p class="sub-info">XXXXXXXXX | </p>
+                    <p class="sub-info">XXXXXXX</p>
+                </div>
+                <div class="info-container">
+                    <p class="autor-info">Autor: </p>
+                    <p class="autor-info">XXX. XXXXXXX XXXXX</p>
+                </div>
+                <div class="info-container">
+                    <p id="tipo-modelo">Tipo de modelo: </p>
+                    <p id="modelo">Gratuito</p>
+                </div>
+            </section>
+
+            <section id="notas-container">
+                <section class="estrelas-container">
+                    <h3 class="estrelas-titulo">Relevância</h3>
+                    <p class="estrelas-notas">4,5</p>
+                </section>
+
+                <section class="estrelas-container">
+                    <h3 class="estrelas-titulo">Usuários</h3>
+                        <p class="estrelas-notas">X,X</p>
+                </section>
+            </section>
+
+            <p id="parecer-assunto">
+                Aqui será utilizado para indicar o assunto do parecer, tema abordado ou texto relacionado a pesquisa.
+            </p>
+
+            <button id="btn-derivacoes">
+                derivações (XX)
+            </button>
+
+            <section id="avalicao-container">
+                <div id="avaliar-container">
+                    <p id="paragrafo-avaliar">Avaliar :</p>
+                </div>
+                <div id="btn-salvar-container">
+                    <button id="btn-salvar-avalicao">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_25_475)">
+                                <path d="M6.36004 12.3001C6.18004 12.1001 5.95004 12.0001 5.67004 12.0001C5.39004 12.0001 5.16004 12.1001 4.98004 12.3001L2.10004 15.3001C1.90004 15.5001 1.66504 15.5951 1.39504 15.5851C1.12504 15.5751 0.895044 15.4751 0.705044 15.2851C0.515044 15.0951 0.420044 14.8601 0.420044 14.5801V2.3101C0.420044 1.8301 0.580044 1.4251 0.900044 1.0951C1.22004 0.765101 1.61004 0.600101 2.07004 0.600101H9.27004C9.73004 0.600101 10.12 0.765101 10.44 1.0951C10.76 1.4251 10.92 1.8301 10.92 2.3101V14.5801C10.92 14.8601 10.825 15.0951 10.635 15.2851C10.445 15.4751 10.215 15.5751 9.94504 15.5851C9.67504 15.5951 9.44004 15.5001 9.24004 15.3001L6.36004 12.3001Z"
+                                      fill="#333333"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_25_475">
+                                    <rect width="15" height="15" fill="white"
+                                          transform="matrix(1 0 0 -1 0.420044 15.6001)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        SALVAR
+                    </button>
+                </div>
+            </section>
+        </section>
+    </section>
 </main>
 
 <footer id="rodape">
