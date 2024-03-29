@@ -234,21 +234,6 @@
     transition: background-color .5s;
 }
 
-#btn-salvar-avalicao {
-    width: 75px;
-    height: 17px;
-    background-color: transparent;
-    font-size: 11px;
-    font-weight: 800;
-    color: var(--main-title-color);
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-#btn-salvar-avalicao {
-    cursor: pointer;
-}
 
 .opcao-filtro {
     width: 138px;
@@ -301,6 +286,22 @@
     font-size: 22px;
     font-weight: 800;
     color: var(--main-title-color);
+}
+
+.btn-salvar-avalicao {
+    width: 75px;
+    height: 17px;
+    background-color: transparent;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--main-title-color);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-salvar-avalicao {
+    cursor: pointer;
 }
 
 .rating {

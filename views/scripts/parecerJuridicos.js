@@ -126,7 +126,7 @@ function renderizarComponente() {
         
         let btnDerivacoes = document.createElement('button');
         btnDerivacoes.id = 'btn-derivacoes';
-        btnDerivacoes.innerText = 'derivações';
+        btnDerivacoes.innerText = 'criar derivação';
 
         estrelasContainer2.appendChild(estrelasTitulo2);
         estrelasContainer2.appendChild(estrelas2);
@@ -173,7 +173,7 @@ function renderizarComponente() {
         btnSalvarContainer.id = 'btn-salvar-container';
 
         let btnSalvarAvaliacao = document.createElement('button');
-        btnSalvarAvaliacao.id = 'btn-salvar-avalicao';
+        btnSalvarAvaliacao.classList.add('btn-salvar-avalicao');
 
         let svgIcon = document.createElement('svg');
         svgIcon.setAttribute('width', '16');
@@ -218,10 +218,9 @@ function renderizarComponente() {
         
         parecerContainer.appendChild(avaliacaoContainer);
 
-
-        criarEstrelas(4.5);
-
         parecerRankingContainer.appendChild(parecerContainer);
+        
+        criarEstrelas(4.5);
     }
 }
 
