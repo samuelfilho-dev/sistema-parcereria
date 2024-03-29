@@ -1,4 +1,4 @@
-function criarEstrelas(notaDeClassificacao) {
+export function criarEstrelas(notaDeClassificacao) {
     let estrelas = '';
     const maxEstrelas = 5;
     const estrelasCheias = Math.floor(notaDeClassificacao);
@@ -26,16 +26,16 @@ function salvarAvaliacao() {
     let notaDeClassificacao = 0;
 
     stars.forEach(element => {
-        element.addEventListener('click', function() {
+        element.addEventListener('click', function () {
             notaDeClassificacao = this.value;
         });
     });
-    
-    console.log(notaDeClassificacao);
-    
-    document.getElementById('btn-salvar-avalicao').addEventListener('click', function() {
-        alert('Avaliação salva com sucesso! Nota de classificação: ' + notaDeClassificacao);
-    });
+
+    document.querySelectorAll('.btn-salvar-avalicao').forEach(element => {
+        element.addEventListener('click', function () {
+            alert('Avaliação salva com sucesso! Nota de classificação: ' + notaDeClassificacao);
+        });
+    })
 }
 
 
