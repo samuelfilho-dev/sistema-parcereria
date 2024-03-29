@@ -8,7 +8,7 @@ export function criarParcerJuridico(assunto, ementa, justificacao, conclusao, cr
         ementa,
         justificacao,
         conclusao,
-        0,
+        [0],
         criadoEm,
         autor
     );

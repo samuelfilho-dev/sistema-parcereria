@@ -7,7 +7,7 @@ export function Autor(nome, sobrenome, email, senha) {
     this.senha = senha;
 }
 
-export function ParecerJuridico(assunto, ementa, justificacao, conclusao, notaDeClassificacao, criadoEm ,autor) {
+export function ParecerJuridico(assunto, ementa, justificacao, conclusao, notaDeClassificacao, criadoEm, autor) {
     const id = Math.floor(Math.random() * 1_000) + 1;
 
     this.titulo = `PARECER JURIDICO Nº ${id}/2024`;
@@ -15,7 +15,7 @@ export function ParecerJuridico(assunto, ementa, justificacao, conclusao, notaDe
     this.ementa = ementa;
     this.justificacao = justificacao;
     this.conclusao = conclusao;
-    this.notaDeClassificacao = notaDeClassificacao;
+    this.notaDeClassificacao = [notaDeClassificacao];
     this.criadoEm = criadoEm;
     this.autor = autor;
 }
