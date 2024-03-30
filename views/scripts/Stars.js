@@ -1,3 +1,5 @@
+import {avaliacoes} from "./ParecerJuridicos.js";
+
 export function criarEstrelas(notaDeClassificacao) {
     let estrelas = '';
     const maxEstrelas = 5;
@@ -28,6 +30,8 @@ function salvarAvaliacao() {
     stars.forEach(element => {
         element.addEventListener('click', function () {
             notaDeClassificacao = this.value;
+            // avaliacoes.push(notaDeClassificacao);
+            // console.log("notas de class",notaDeClassificacao);
         });
     });
 
@@ -35,9 +39,21 @@ function salvarAvaliacao() {
         element.addEventListener('click', function () {
             alert('Avaliação salva com sucesso! Nota de classificação: ' + notaDeClassificacao);
         });
-    })
+    });
+
 }
 
+// const estrelasContainer = document.querySelectorAll('.estrelas-container');
 
-criarEstrelas(4.5);
+
+// for (let i = 0; i < estrelasContainer.length; i++) {
+//     const element = document.querySelectorAll('.estrelas-container')[i];
+//     const estrelasNotas  = document.querySelectorAll('.estrelas-notas')[i].innerText;
+//    
+//     const notaDeClassificacao = parseFloat(estrelasNotas);
+//     console.log(notaDeClassificacao);
+//     criarEstrelas(notaDeClassificacao, element);
+//    
+//}
+
 salvarAvaliacao();
