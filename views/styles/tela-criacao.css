@@ -1,0 +1,130 @@
+#tela-criacao {
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-background-color);
+}
+
+#tela-criacao-container {
+    width: 1233px;
+    height: 824px;
+    background-color: var(--background-color);
+    margin-top: 90px;
+    margin-bottom: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#titulo-principal-container {
+    width: 1233px;
+    height: 50px;
+    background-color: var(--font-primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#titulo-principal {
+    width: 340px;
+    height: 28px;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+}
+
+#label-cotainer {
+    width: 1110px;
+    height: 600px;
+    margin-top: 90px;
+}
+
+#primeira-linha {
+    display: flex;
+    gap: 45px;
+}
+
+#data {
+    width: 159px;
+}
+
+#nome {
+    width: 498px;
+}
+
+#id {
+    width: 355px;
+}
+
+#segunda-linha {
+    margin-top: 45px;
+    display: flex;
+    gap: 107px;
+}
+
+#titulo {
+    width: 498px;
+}
+
+#email {
+    width: 498px;
+}
+
+#terceira-linha {
+    margin-top: 45px;
+    display: flex;
+    gap: 20px;
+}
+
+#modelo {
+    width: 158px;
+    height: 34px;
+}
+
+#quarta-linha {
+    margin-top: 45px;
+    gap: 20px;
+}
+
+#assunto {
+    width: 1100px;
+    height: 79px;
+}
+
+#quinta-linha {
+    margin-top: 20px;
+    gap: 20px;
+}
+
+#ementa {
+    width: 1100px;
+}
+
+#conclusao {
+    width: 1100px;
+}
+
+#sexta-linha {
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.entrada-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.entrada {
+    height: 37px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.nome-entrada {
+    width: 150px;
+    height: 18px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--font-primary-color);
+}

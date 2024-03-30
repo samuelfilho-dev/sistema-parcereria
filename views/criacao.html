@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8">  <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/root.css">
     <link rel="stylesheet" href="styles/cabecalho.css">
     <link rel="stylesheet" href="styles/rodape.css">
-    <link rel="stylesheet" href="styles/parecer-ranking.css">
-    <title>Sistema Parecer Juridico</title>
+    <link rel="stylesheet" href="styles/tela-criacao.css">
+    <title>Tela De Criação</title>
 </head>
 <body>
 <header id="cabecalho">
@@ -72,130 +72,73 @@
         Publicar
     </button>
 </header>
-<main id="parecer-ranking">
-    <section id="parecer-ranking-container">
-        <div id="main-info-container">
-            <h1 id="titulo-main">Ranque de pareceres</h1>
-            <p id="titulo-ph">Tópicos separados para você!</p>
-        </div>
-        <nav id="ranking-navbar">
-            <button id="btn-avalicacao-nav">
-                Melhores avaliações
-            </button>
-            <button id="btn-recentes-nav">
-                Recentes
-            </button>
-            <button id="btn-antigo-nav">
-                Mais antigos
-            </button>
-            <button id="btn-atualizacoes-nav">
-                Atualizações
-            </button>
-            <button id="button-add-filtro">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_25_250)">
-                        <path d="M4.152 11.544V0.456006H7.248V11.544H4.152ZM0 7.46401V4.53601H11.424V7.46401H0Z"
-                              fill="black"/>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_25_250">
-                            <rect width="12" height="12" fill="white" transform="matrix(1 0 0 -1 0 12)"/>
-                        </clipPath>
-                    </defs>
-                </svg>
-            </button>
-        </nav>
-
-        <div id="parecer-ranking-filtro">
-            <p id="ph-ranking-filtro">Organizar por</p>
-            <label>
-                <select id="select-ranking-filtro">
-                    <option selected class="opcao-filtro">
-                        Mais Populares
-                    </option>
-                    <option class="opcao-filtro">Melhores Avalidados</option>
-                </select>
-            </label>
-        </div>
-
-        <section id="parecer-container">
-
-            <section id="parecer-info">
-                <h2 id="titulo-parecer">PARECER JURIDICO Nº 64/2024</h2>
-                <div class="info-container">
-                    <p class="sub-info">2024-03-29T11:08:29 | </p>
-                    <p class="sub-info">Servidor público</p>
-                </div>
-                <div class="info-container">
-                    <p class="autor-info">Autor: </p>
-                    <p class="autor-info">DR(a): Maya Francisca Castro</p>
-                </div>
-                <div class="info-container">
-                    <p id="tipo-modelo">Tipo de modelo: </p>
-                    <p id="modelo">Gratuito</p>
-                </div>
-            </section>
-
-            <section id="notas-container">
-                <section class="estrelas-container">
-                    <h3 class="estrelas-titulo">Relevância</h3>
-                    <section class="stars"></section>
-                    <p class="estrelas-notas">4,5</p>
+<main id="tela-criacao">
+    <section id="tela-criacao-container">
+        <section id="titulo-principal-container">
+            <h1 id="titulo-principal">Criar Parecer</h1>
+        </section>
+        <section id="label-cotainer">
+            <section id="primeira-linha">
+                <section class="entrada-container">
+                    <label for="data" class="nome-entrada">Data</label>
+                    <input type="date" id="data" class="entrada"/>
                 </section>
 
-                <section class="estrelas-container">
-                    <h3 class="estrelas-titulo">Usuários</h3>
-                    <section class="stars"></section>
-                    <p class="estrelas-notas">4.4</p>
+                <section class="entrada-container">
+                    <label for="nome" class="nome-entrada">Nome (Autor)</label>
+                    <input type="text" id="nome" class="entrada"/>
+                </section>
+
+                <section class="entrada-container">
+                    <label for="id" class="nome-entrada">ID (Nº)</label>
+                    <input type="text" id="id" class="entrada"/>
                 </section>
             </section>
 
-            <p id="parecer-assunto">
-                João Paulo, é servidor público municipal, desde 2 de agosto de 2007, ocupando o cargo efetivo de dentista
-            </p>
+            <section id="segunda-linha">
+                <section class="entrada-container">
+                    <label for="titulo" class="nome-entrada">Título</label>
+                    <input type="text" id="titulo" class="entrada"/>
+                </section>
 
-            <button id="btn-derivacoes">
-                criar derivação
-            </button>
+                <section class="entrada-container">
+                    <label for="email" class="nome-entrada">E-mail</label>
+                    <input type="text" id="email" class="entrada"/>
+                </section>
+            </section>
 
-            <section id="avalicao-container">
-                <div id="avaliar-container">
-                    <p id="paragrafo-avaliar">Avaliar :</p>
-                    <div class="rating">
-                        <input type="radio" id="star5" name="rating" value="5">
-                        <label for="star5"></label>
-                        <input type="radio" id="star4" name="rating" value="4">
-                        <label for="star4"></label>
-                        <input type="radio" id="star3" name="rating" value="3">
-                        <label for="star3"></label>
-                        <input type="radio" id="star2" name="rating" value="2">
-                        <label for="star2"></label>
-                        <input type="radio" id="star1" name="rating" value="1">
-                        <label for="star1"></label>
-                    </div>
-                </div>
-                <div id="btn-salvar-container">
-                    <button class="btn-salvar-avalicao">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_25_475)">
-                                <path d="M6.36004 12.3001C6.18004 12.1001 5.95004 12.0001 5.67004 12.0001C5.39004 12.0001 5.16004 12.1001 4.98004 12.3001L2.10004 15.3001C1.90004 15.5001 1.66504 15.5951 1.39504 15.5851C1.12504 15.5751 0.895044 15.4751 0.705044 15.2851C0.515044 15.0951 0.420044 14.8601 0.420044 14.5801V2.3101C0.420044 1.8301 0.580044 1.4251 0.900044 1.0951C1.22004 0.765101 1.61004 0.600101 2.07004 0.600101H9.27004C9.73004 0.600101 10.12 0.765101 10.44 1.0951C10.76 1.4251 10.92 1.8301 10.92 2.3101V14.5801C10.92 14.8601 10.825 15.0951 10.635 15.2851C10.445 15.4751 10.215 15.5751 9.94504 15.5851C9.67504 15.5951 9.44004 15.5001 9.24004 15.3001L6.36004 12.3001Z"
-                                      fill="#333333"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_25_475">
-                                    <rect width="15" height="15" fill="white"
-                                          transform="matrix(1 0 0 -1 0.420044 15.6001)"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                        SALVAR
-                    </button>
-                </div>
+            <section id="terceira-linha">
+                <section id="modelo-cotainer" class="entrada-container">
+                    <label for="modelo" class="nome-entrada">Tipo de modelo</label>
+                    <select id="modelo" class="entrada">
+                        <option>Gratuito</option>
+                    </select>
+                </section>
+            </section>
+
+            <section id="quarta-linha">
+                <section class="entrada-container">
+                    <label for="assunto" class="nome-entrada">Assunto</label>
+                    <textarea id="assunto" class="entrada" cols="3" rows="5"></textarea>
+                </section>
+            </section>
+
+            <section id="quinta-linha">
+                <section class="entrada-container">
+                    <label for="ementa" class="nome-entrada">Ementa</label>
+                    <input type="text" id="ementa" class="entrada"/>
+                </section>
+            </section>
+
+            <section id="sexta-linha">
+                <section class="entrada-container">
+                    <label for="conclusao" class="nome-entrada">Conclusão</label>
+                    <input type="text" id="conclusao" class="entrada"/>
+                </section>
             </section>
         </section>
     </section>
 </main>
-
 <footer id="rodape">
     <section id="rodape-logos">
         <section id="rodape-logos-container">
@@ -264,9 +207,6 @@
             <a class="sobre"> ©PIA</a>
         </div>
     </section>
-
-    <script type="module" src="scripts/Stars.js"></script>
-    <script type="module" src="scripts/ParecerJuridicos.js"></script>
 </footer>
 </body>
 </html>
