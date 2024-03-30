@@ -6,7 +6,7 @@
 
 #tela-criacao-container {
     width: 1233px;
-    height: 824px;
+    height: 900px;
     background-color: var(--background-color);
     margin-top: 90px;
     margin-bottom: 180px;
@@ -105,6 +105,11 @@
 }
 
 #sexta-linha {
+    margin-top: 20px;
+    gap: 20px;
+}
+
+#setima-linha {
     margin-top: 20px;
     gap: 20px;
 }
